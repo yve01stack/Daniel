@@ -1,0 +1,227 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Auth API Documentation</h1>
+<p>This section provides detailed documentation for the Auth API. Below you will find information on each available endpoint.</p>
+
+<h2>Endpoints</h2>
+
+<!-- Signup Endpoint -->
+<h3>POST /auth/signup</h3>
+<p>Registers a new user.</p>
+<strong>Request:</strong>
+<ul>
+    <li><strong>phone:</strong> (string) The user's phone number.</li>
+    <li><strong>name:</strong> (string) The user's name.</li>
+    <li><strong>password:</strong> (string) The user's password.</li>
+    <li><strong>email:</strong> (string) The user's email address.</li>
+    <li><strong>location:</strong> (string) The user's location (optional).</li>
+</ul>
+<strong>Response:</strong>
+<pre>
+{
+  "status": "success",
+  "access_token": "your_access_token_here",
+  "refresh_token": "your_refresh_token_here",
+  "user_info": {
+    "id": 1,
+    "phone": "1234567890",
+    "name": "John Doe",
+    "email": "johndoe@example.com",
+    "location": "Paris"
+  },
+  "message": "Completed"
+}
+</pre>
+
+<!-- Signin Endpoint -->
+<h3>POST /auth/signin</h3>
+<p>Authenticates a user.</p>
+<strong>Request:</strong>
+<ul>
+    <li><strong>phone:</strong> (string) The user's phone number.</li>
+    <li><strong>password:</strong> (string) The user's password.</li>
+</ul>
+<strong>Response:</strong>
+<pre>
+{
+  "status": "success",
+  "access_token": "your_access_token_here",
+  "refresh_token": "your_refresh_token_here",
+  "user_info": {
+    "id": 1,
+    "phone": "1234567890",
+    "name": "John Doe",
+    "email": "johndoe@example.com"
+  },
+  "message": "Completed!"
+}
+</pre>
+
+<!-- Fetch User Endpoint -->
+<h3>GET /auth/user</h3>
+<p>Fetches the authenticated user's details. Requires JWT.</p>
+<strong>Request Headers:</strong>
+<ul>
+    <li><strong>Authorization:</strong> Bearer <em>Your JWT Token</em></li>
+</ul>
+<strong>Response:</strong>
+<pre>
+{
+  "status": "success",
+  "access_token": "your_access_token_here",
+  "refresh_token": "your_refresh_token_here",
+  "user_info": {
+    "id": 1,
+    "phone": "1234567890",
+    "name": "John Doe",
+    "email": "johndoe@example.com"
+  },
+  "message": "Completed!"
+}
+</pre>
+
+<!-- Refresh Token Endpoint -->
+<h3>POST /auth/refresh</h3>
+<p>Refreshes the JWT access token. Requires the refresh token.</p>
+<strong>Request Headers:</strong>
+<ul>
+    <li><strong>Authorization:</strong> Bearer <em>Your JWT Refresh Token</em></li>
+</ul>
+<strong>Response:</strong>
+<pre>
+{
+  "status": "success",
+  "access_token": "your_new_access_token_here"
+}
+</pre>
+
+<!-- Logout Endpoint -->
+<h3>POST /auth/logout</h3>
+<p>Logs the user out by clearing the JWT cookies.</p>
+<strong>Response:</strong>
+<pre>
+{
+  "status": "success",
+  "message": "Successfully logged out."
+}
+</pre>
+
+<!-- Edit Email Endpoint -->
+<h3>POST /auth/edict_email</h3>
+<p>Edits the user's email address.</p>
+<strong>Request:</strong>
+<ul>
+    <li><strong>email:</strong> (string) The new email address.</li>
+    <li><strong>phone:</strong> (string) The user's phone number.</li>
+</ul>
+<strong>Response:</strong>
+<pre>
+{
+  "status": "success",
+  "message": "Votre adresse a bien été modifiée!",
+  "user_info": {
+    "id": 1,
+    "phone": "1234567890",
+    "email": "newemail@example.com"
+  }
+}
+</pre>
+
+<!-- Change Password Endpoint -->
+<h3>POST /auth/change_pwd</h3>
+<p>Changes the user's password.</p>
+<strong>Request:</strong>
+<ul>
+    <li><strong>password:</strong> (string) The new password.</li>
+</ul>
+<strong>Response:</strong>
+<pre>
+{
+  "status": "success",
+  "message": "Mot de passe modifié!",
+  "user_info": {
+    "id": 1,
+    "phone": "1234567890"
+  }
+}
+</pre>
+
+<!-- Check Email Endpoint -->
+<h3>POST /auth/check_email</h3>
+<p>Initiates the email verification process.</p>
+<strong>Request:</strong>
+<ul>
+    <li><strong>baseUrl:</strong> (string) The base URL for the email confirmation link.</li>
+</ul>
+<strong>Response:</strong>
+<pre>
+{
+  "status": "success",
+  "message": "Vérifiez votre e-mail (ou spam) pour obtenir les instructions pour confirmer votre adresse mail.",
+  "user_info": {
+    "id": 1,
+    "phone": "1234567890",
+    "email": "newemail@example.com"
+  }
+}
+</pre>
+
+<!-- Checked Email Endpoint -->
+<h3>POST /auth/checked_email</h3>
+<p>Verifies the email confirmation token.</p>
+<strong>Request:</strong>
+<ul>
+    <li><strong>token:</strong> (string) The email confirmation token.</li>
+</ul>
+<strong>Response:</strong>
+<pre>
+{
+  "status": "success",
+  "message": "Votre adresse mail a bien été vérifiée.",
+  "user_info": {
+    "id": 1,
+    "phone": "1234567890",
+    "email": "newemail@example.com"
+  }
+}
+</pre>
+
+<!-- Forgot Password Endpoint -->
+<h3>POST /auth/forgot_password</h3>
+<p>Sends a password reset email.</p>
+<strong>Request:</strong>
+<ul>
+    <li><strong>email:</strong> (string) The user's email address.</li>
+    <li><strong>baseUrl:</strong> (string) The base URL for the password reset link.</li>
+</ul>
+<strong>Response:</strong>
+<pre>
+{
+  "status": "success",
+  "message": "Vérifiez votre e-mail (ou spam) pour obtenir les instructions pour réinitialiser votre mot de passe"
+}
+</pre>
+
+<!-- Reset Password Endpoint -->
+<h3>POST /auth/reset_password</h3>
+<p>Resets the user's password using a token.</p>
+<strong>Request:</strong>
+<ul>
+    <li><strong>token:</strong> (string) The password reset token.</li>
+</ul>
+<strong>Response:</strong>
+<pre>
+{
+  "status": "success",
+  "access_token": "your_new_access_token_here",
+  "refresh_token": "your_new_refresh_token_here",
+  "user_info": {
+    "id": 1,
+    "phone": "1234567890"
+  },
+  "message": "Veuillez accéder à votre profil, cliquez modifier et définir un nouveau mot de passe!"
+}
+</pre>
+
+{% endblock %}

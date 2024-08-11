@@ -1,0 +1,208 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Product and Order API Documentation</h1>
+
+<h2>Fetch Products</h2>
+<p>
+    <span class="endpoint">Endpoint:</span> <code>/fetch_products</code><br>
+    <span class="endpoint">Method:</span> GET, POST<br>
+    <span class="endpoint">Description:</span> This endpoint retrieves all available products, their categories, and availability in different countries.
+</p>
+<h3>Response:</h3>
+<pre><code>{
+    "status": "success",
+    "message": "Complete!",
+    "products": [
+        {
+            "id": 1,
+            "name": "Product 1",
+            "category": "Category 1",
+            "price": 100.0,
+            ...
+        },
+        ...
+    ],
+    "countries": [
+        {
+            "id": 1,
+            "country": "Country 1"
+        },
+        ...
+    ],
+    "categories": ["Category 1", "Category 2", ...]
+}</code></pre>
+
+    <h2>Fetch Carts</h2>
+    <p>
+        <span class="endpoint">Endpoint:</span> <code>/fetch_carts</code><br>
+        <span class="endpoint">Method:</span> GET, POST<br>
+        <span class="endpoint">Authentication:</span> JWT Required<br>
+        <span class="endpoint">Description:</span> This endpoint retrieves all cart items for the authenticated user that have not been ordered yet.
+    </p>
+    <h3>Response:</h3>
+    <pre><code>{
+    "status": "success",
+    "message": "Complete!",
+    "carts": [
+        {
+            "id": 1,
+            "product_id": 1,
+            "quantity": 2,
+            ...
+        },
+        ...
+    ]
+}</code></pre>
+
+    <h2>Cart Management</h2>
+
+    <h3>Add to Cart</h3>
+    <p>
+        <span class="endpoint">Endpoint:</span> <code>/add_to_cart</code><br>
+        <span class="endpoint">Method:</span> GET, POST<br>
+        <span class="endpoint">Authentication:</span> JWT Required<br>
+        <span class="endpoint">Description:</span> This endpoint adds a specified product to the authenticated user's cart. If the product already exists in the cart, its quantity is incremented by one.
+    </p>
+    <h3>Request Body:</h3>
+    <pre><code>{
+    "prodId": 1
+}</code></pre>
+    <h3>Response:</h3>
+    <pre><code>{
+    "status": "success",
+    "message": "Complete!",
+    "carts": [
+        {
+            "id": 1,
+            "product_id": 1,
+            "quantity": 3,
+            ...
+        },
+        ...
+    ]
+}</code></pre>
+
+    <h3>Remove from Cart</h3>
+    <p>
+        <span class="endpoint">Endpoint:</span> <code>/remove_from_cart</code><br>
+        <span class="endpoint">Method:</span> GET, POST<br>
+        <span class="endpoint">Authentication:</span> JWT Required<br>
+        <span class="endpoint">Description:</span> This endpoint removes a specified item from the authenticated user's cart.
+    </p>
+    <h3>Request Body:</h3>
+    <pre><code>{
+    "cartId": 1
+}</code></pre>
+    <h3>Response:</h3>
+    <pre><code>{
+    "status": "success",
+    "message": "Complete!",
+    "carts": [
+        {
+            "id": 2,
+            "product_id": 2,
+            "quantity": 1,
+            ...
+        },
+        ...
+    ]
+}</code></pre>
+
+    <h3>Increase Quantity in Cart</h3>
+    <p>
+        <span class="endpoint">Endpoint:</span> <code>/increase_qty</code><br>
+        <span class="endpoint">Method:</span> GET, POST<br>
+        <span class="endpoint">Authentication:</span> JWT Required<br>
+        <span class="endpoint">Description:</span> This endpoint increases the quantity of a specified cart item for the authenticated user.
+    </p>
+    <h3>Request Body:</h3>
+    <pre><code>{
+    "cartId": 1
+}</code></pre>
+    <h3>Response:</h3>
+    <pre><code>{
+    "status": "success",
+    "message": "Complete!",
+    "carts": [
+        {
+            "id": 1,
+            "product_id": 1,
+            "quantity": 4,
+            ...
+        },
+        ...
+    ]
+}</code></pre>
+
+    <h3>Decrease Quantity in Cart</h3>
+    <p>
+        <span class="endpoint">Endpoint:</span> <code>/decrease_qty</code><br>
+        <span class="endpoint">Method:</span> GET, POST<br>
+        <span class="endpoint">Authentication:</span> JWT Required<br>
+        <span class="endpoint">Description:</span> This endpoint decreases the quantity of a specified cart item for the authenticated user. If the quantity is more than one, it is decremented by one.
+    </p>
+    <h3>Request Body:</h3>
+    <pre><code>{
+    "cartId": 1
+}</code></pre>
+    <h3>Response:</h3>
+    <pre><code>{
+    "status": "success",
+    "message": "Complete!",
+    "carts": [
+        {
+            "id": 1,
+            "product_id": 1,
+            "quantity": 3,
+            ...
+        },
+        ...
+    ]
+}</code></pre>
+
+    <h2>Order Management</h2>
+
+    <h3>Fetch Orders</h3>
+    <p>
+        <span class="endpoint">Endpoint:</span> <code>/order/fetch</code><br>
+        <span class="endpoint">Method:</span> GET, POST<br>
+        <span class="endpoint">Authentication:</span> JWT Required<br>
+        <span class="endpoint">Description:</span> This endpoint retrieves all orders for the authenticated user that have not been removed.
+    </p>
+    <h3>Response:</h3>
+    <pre><code>{
+    "status": "success",
+    "message": "Complete!",
+    "orders": [
+        {
+            "id": 1,
+            "order_number": "12345",
+            "total_price": 300.0,
+            ...
+        },
+        ...
+    ]
+}</code></pre>
+
+    <h3>Order Cart</h3>
+    <p>
+        <span class="endpoint">Endpoint:</span> <code>/order/cart</code><br>
+        <span class="endpoint">Method:</span> GET, POST<br>
+        <span class="endpoint">Authentication:</span> JWT Required<br>
+        <span class="endpoint">Description:</span> This endpoint creates an order for the authenticated user from their current cart items.
+    </p>
+    <h3>Response:</h3>
+    <pre><code>{
+    "status": "success",
+    "message": "Order placed successfully!",
+    "order": {
+        "id": 1,
+        "order_number": "12345",
+        "total_price": 300.0,
+        ...
+    }
+}</code></pre>
+
+{% endblock %}
+

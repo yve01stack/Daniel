@@ -1,55 +1,84 @@
+<!-- templates/base.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %} {% endblock %} - Documentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
     <style>
-        h2 {
-            width: 100%;
+        /* static/styles.css */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
         }
 
-        .title {
-            margin: 5px;
-            width: 100%;
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
         }
 
-        .content {
-            margin: 5px;
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
         }
 
-        .post {
-            flex: 20%;
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 20px;
+            margin-bottom: 50px;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+        pre {
+            background-color: #f4f4f4;
             padding: 10px;
-            margin: 5px;
-            background-color: #f3f3f3;
-            inline-size: 100%;
+            border-radius: 4px;
+            width: 100%;
+            overflow-x: auto;
         }
-
-        .title a {
-            color: #00a36f;
-            text-decoration: none;
+        .endpoint {
+            font-weight: bold;
         }
-
-        nav a {
-            color: #d64161;
-            font-size: 3em;
-            margin-left: 50px;
-            text-decoration: none;
+        footer {
+            background-color: #f1f1f1;
+            padding: 10px 20px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
 
     </style>
 </head>
 <body>
-    <nav>
-        <a href="{{ url_for('main.index') }}">API Documentation</a>
-    </nav>
-    <hr>
-    <div class="content">
-        {% block content %} {% endblock %}
-    </div>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('docs.docs', _external=True) }}">Home</a></li>
+                <li><a href="{{ url_for('docs.docs', _external=True) }}">API Documentation</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>&copy; {{ year }} Mes Achats en Chine. All rights reserved.</p>
+    </footer>
 </body>
 </html>

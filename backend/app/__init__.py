@@ -20,8 +20,6 @@ def create_app(config_class=Config):
     migrate.init_app(app, db, render_as_batch=True)
     mail.init_app(app)
     
-    
-    
     if not app.debug:
         if app.config['MAIL_SERVER']:
             auth = None
@@ -64,8 +62,8 @@ def create_app(config_class=Config):
         g.sendMail = MailSender(app) 
         
         # Register blueprints here
-        from .main import bp as main_bp
-        app.register_blueprint(main_bp)
+        from .docs import bp as docs_bp
+        app.register_blueprint(docs_bp)
 
         from .auth import bp as auth_bp
         app.register_blueprint(auth_bp, url_prefix='/auth')
@@ -76,8 +74,8 @@ def create_app(config_class=Config):
         from .admin import bp as admin_bp
         app.register_blueprint(admin_bp, url_prefix='/admin')
 
-    @app.route('/test/')
-    def test_page():
+    @app.route('/test')
+    def test():
         return '<h1>Testing the Flask Application Factory Pattern</h1>'
 
     return app
