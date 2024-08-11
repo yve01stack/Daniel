@@ -1,0 +1,8 @@
+daniel_env
+logs
+migrations
+app.db
+.env
+__pycache__
+tradrdv-94901196e253.json
+app/static/uploads/

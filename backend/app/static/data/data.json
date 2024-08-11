@@ -1,0 +1,717 @@
+{
+    "result": {
+      "status": {
+        "code": 200,
+        "attempt": 1,
+        "data": "success",
+        "executionTime": "5.39",
+        "requestTime": "2024-03-29 02:07:35",
+        "requestId": "931632091859573d9b84109d64f6df35",
+        "endpoint": "item_search",
+        "apiVersion": "4.0.1",
+        "functionsVersion": "4.0.5",
+        "la": "0.25",
+        "pmu": 729936,
+        "mu": 696384
+      },
+      "settings": {
+        "q": "iphone",
+        "catId": "",
+        "brandId": "",
+        "loc": "",
+        "attr": "",
+        "sort": "default",
+        "page": "1",
+        "startPrice": "",
+        "endPrice": "",
+        "region": "US",
+        "locale": "en_US",
+        "currency": "USD"
+      },
+      "base": {
+        "hasNextPage": true,
+        "totalResults": 640737,
+        "pageSize": 20,
+        "q": "iphone",
+        "sortValues": [
+          "default",
+          "salesDesc",
+          "priceAsc",
+          "priceDesc",
+          "latest"
+        ],
+        "brandList": [],
+        "locationList": {
+          "name": "Ship From",
+          "list": [
+            {
+              "id": "US",
+              "selected": false
+            }
+          ]
+        },
+        "attributeList": [],
+        "categoryList": {
+          "name": "Categories",
+          "list": [
+            {
+              "name": "Cellphones & Telecommunications",
+              "id": 509,
+              "selected": false,
+              "list": [
+                {
+                  "name": "Cellphones",
+                  "id": 5090301,
+                  "selected": false
+                },
+                {
+                  "name": "Half-wrapped Cases",
+                  "id": 200217991,
+                  "selected": false
+                },
+                {
+                  "name": "Phone Screen Protectors",
+                  "id": 200003089,
+                  "selected": false
+                },
+                {
+                  "name": "Wallet Cases",
+                  "id": 200216972,
+                  "selected": false
+                },
+                {
+                  "name": "Mobile Phone Cables",
+                  "id": 100003569,
+                  "selected": false
+                },
+                {
+                  "name": "Mobile Phone LCD Screens",
+                  "id": 200005298,
+                  "selected": false
+                },
+                {
+                  "name": "Mobile Phone Chargers",
+                  "id": 100003571,
+                  "selected": false
+                },
+                {
+                  "name": "Wireless Chargers",
+                  "id": 200217751,
+                  "selected": false
+                },
+                {
+                  "name": "Phone Accessory Bundles & Sets",
+                  "id": 200003169,
+                  "selected": false
+                },
+                {
+                  "name": "Phone Holders & Stands",
+                  "id": 5093004,
+                  "selected": false
+                }
+              ]
+            },
+            {
+              "name": "Consumer Electronics",
+              "id": 44,
+              "selected": false,
+              "list": [
+                {
+                  "name": "Earphones & Headphones",
+                  "id": 63705,
+                  "selected": false
+                },
+                {
+                  "name": "Phone Earphones & Headphones",
+                  "id": 200216654,
+                  "selected": false
+                },
+                {
+                  "name": "Smart Watches",
+                  "id": 200010206,
+                  "selected": false
+                },
+                {
+                  "name": "Bluetooth Earphones & Headphones",
+                  "id": 200216593,
+                  "selected": false
+                },
+                {
+                  "name": "Earphones",
+                  "id": 200216686,
+                  "selected": false
+                }
+              ]
+            },
+            {
+              "name": "Security & Protection",
+              "id": 30,
+              "selected": false
+            },
+            {
+              "name": "Tools",
+              "id": 1420,
+              "selected": false
+            },
+            {
+              "name": "Electronic Components & Supplies",
+              "id": 502,
+              "selected": false
+            },
+            {
+              "name": "Computer & Office",
+              "id": 7,
+              "selected": false
+            },
+            {
+              "name": "Home Improvement",
+              "id": 13,
+              "selected": false
+            },
+            {
+              "name": "Sports & Entertainment",
+              "id": 18,
+              "selected": false
+            },
+            {
+              "name": "Automobiles & Motorcycles",
+              "id": 34,
+              "selected": false
+            },
+            {
+              "name": "Home & Garden",
+              "id": 15,
+              "selected": false
+            },
+            {
+              "name": "Lights & Lighting",
+              "id": 39,
+              "selected": false
+            },
+            {
+              "name": "Beauty & Health",
+              "id": 66,
+              "selected": false
+            },
+            {
+              "name": "Luggage & Bags",
+              "id": 1524,
+              "selected": false
+            },
+            {
+              "name": "Toys & Hobbies",
+              "id": 26,
+              "selected": false
+            },
+            {
+              "name": "Home Appliances",
+              "id": 6,
+              "selected": false
+            },
+            {
+              "name": "Education & Office Supplies",
+              "id": 21,
+              "selected": false
+            },
+            {
+              "name": "Watches",
+              "id": 1511,
+              "selected": false
+            },
+            {
+              "name": "Mother & Kids",
+              "id": 1501,
+              "selected": false
+            },
+            {
+              "name": "Jewelry & Accessories",
+              "id": 1509,
+              "selected": false
+            }
+          ]
+        }
+      },
+      "resultList": [
+        {
+          "item": {
+            "itemId": 1005006569602851,
+            "title": "Sanrio Hello Kitty Pink Girl Cute Phone Case For iPhone 15 14 13 12 11 Pro Max 7 8 Plus SE XR XS MAX Y2K Anti Fall Laser Shell",
+            "sales": 400,
+            "image": "//ae01.alicdn.com/kf/Sc5128411f41c4e3e8f03b1fc38c3952au.jpg",
+            "sku": {
+              "def": {
+                "price": null,
+                "promotionPrice": 0.82,
+                "prices": {
+                  "pc": 0.82,
+                  "app": 0.82
+                }
+              }
+            },
+            "averageStarRate": 4.4
+          },
+          "delivery": {
+            "freeShipping": false,
+            "shippingFee": null,
+            "shippingDisplay": ""
+          }
+        },
+        {
+          "item": {
+            "itemId": 1005006662575121,
+            "title": "LCD For iPhone X XR XS Max Display INCELL OLED Screen For iPhone 11 12 Pro Max 13 14 LCD Display Touch Screen 14Plus 15 Assembly",
+            "sales": 4,
+            "image": "//ae01.alicdn.com/kf/Sfe2b2a0d5c3c4c29991847e77d1632b9t.jpg",
+            "sku": {
+              "def": {
+                "price": null,
+                "promotionPrice": 13.34,
+                "prices": {
+                  "pc": 13.34,
+                  "app": 13.34
+                }
+              }
+            },
+            "averageStarRate": 5
+          },
+          "delivery": {
+            "freeShipping": true,
+            "shippingFee": 0,
+            "shippingDisplay": "Free shipping"
+          }
+        },
+        {
+          "item": {
+            "itemId": 1005006713426878,
+            "title": "4PCS Privacy Screen Protector For iPhone 14 Pro Max 14 Plus Anti-Spy Glass For iPhone 15 13 12 11 Pro Max 13 Mini Tempered Glass",
+            "sales": 23,
+            "image": "//ae01.alicdn.com/kf/Sb55692123d8f45118a9e356dd9760e3ck.jpg",
+            "sku": {
+              "def": {
+                "price": null,
+                "promotionPrice": 1.1,
+                "prices": {
+                  "pc": 1.1,
+                  "app": 1.1
+                }
+              }
+            },
+            "averageStarRate": null
+          },
+          "delivery": {
+            "freeShipping": false,
+            "shippingFee": null,
+            "shippingDisplay": ""
+          }
+        },
+        {
+          "item": {
+            "itemId": 1005006589444334,
+            "title": "PD 20W Fast Charging Cable For Apple iPhone 14 13 12 11 Pro Max Plus Mini USB C 1M 2M Data Cables Quick Charge Phone Accessories",
+            "sales": 746,
+            "image": "//ae01.alicdn.com/kf/See02c0d959a1461da8ae32498a01ed1dO.jpg",
+            "sku": {
+              "def": {
+                "price": null,
+                "promotionPrice": 1.19,
+                "prices": {
+                  "pc": 1.19,
+                  "app": 1.19
+                }
+              }
+            },
+            "averageStarRate": 4.9
+          },
+          "delivery": {
+            "freeShipping": true,
+            "shippingFee": 0,
+            "shippingDisplay": "Free shipping"
+          }
+        },
+        {
+          "item": {
+            "itemId": 1005006586329859,
+            "title": "100W Magnetic Wireless Charger Pad Phone Chargers For iPhone 15 14 13 Pro Max Airpods Portable Macsafe PD Fast Charging Station",
+            "sales": 162,
+            "image": "//ae01.alicdn.com/kf/Sc10844c085314b8cb9fa41fc72e6d829r.jpg",
+            "sku": {
+              "def": {
+                "price": null,
+                "promotionPrice": 3.53,
+                "prices": {
+                  "pc": 3.53,
+                  "app": 3.53
+                }
+              }
+            },
+            "averageStarRate": 4.8
+          },
+          "delivery": {
+            "freeShipping": true,
+            "shippingFee": 0,
+            "shippingDisplay": "Free shipping"
+          }
+        },
+        {
+          "item": {
+            "itemId": 1005006664239952,
+            "title": "OLED For iPhone X XR XS Max Incell For 11 12 13 Pro Max 13 Mini 14 Plus 15 LCD Display Screen With 3D Touch Digitizer Assembly",
+            "sales": 0,
+            "image": "//ae01.alicdn.com/kf/S2238b1667b18486890b484ec362a5501L.jpg",
+            "sku": {
+              "def": {
+                "price": null,
+                "promotionPrice": 12.02,
+                "prices": {
+                  "pc": 12.02,
+                  "app": 12.02
+                }
+              }
+            },
+            "averageStarRate": null
+          },
+          "delivery": {
+            "freeShipping": true,
+            "shippingFee": 0,
+            "shippingDisplay": "Free shipping"
+          }
+        },
+        {
+          "item": {
+            "itemId": 1005006587968761,
+            "title": "90W Fast Charger 3 Ports PD USB Car Charging Mobile Phone Type-C Adapter Quick Charger in Car for iPhone 14 15 Pro/Max Samsung",
+            "sales": 548,
+            "image": "//ae01.alicdn.com/kf/S6468c966800042348a10891cdc8bf0d3I.jpg",
+            "sku": {
+              "def": {
+                "price": null,
+                "promotionPrice": 2.89,
+                "prices": {
+                  "pc": 2.89,
+                  "app": 2.89
+                }
+              }
+            },
+            "averageStarRate": 4.5
+          },
+          "delivery": {
+            "freeShipping": true,
+            "shippingFee": 0,
+            "shippingDisplay": "Free shipping"
+          }
+        },
+        {
+          "item": {
+            "itemId": 1005006756360102,
+            "title": "Apple iPhone X 4G Face ID Mobile Phone Original Used Unlocked 5.8\" 64/256GB ROM Hexa-core IOS 12MP Camera Smartphones",
+            "sales": 0,
+            "image": "//ae01.alicdn.com/kf/S9557d552b3be49c7a2177d3ff7bea35aI.jpg",
+            "sku": {
+              "def": {
+                "price": null,
+                "promotionPrice": 167.74,
+                "prices": {
+                  "pc": 167.74,
+                  "app": 167.74
+                }
+              }
+            },
+            "averageStarRate": null
+          },
+          "delivery": {
+            "freeShipping": false,
+            "shippingFee": null,
+            "shippingDisplay": ""
+          }
+        },
+        {
+          "item": {
+            "itemId": 1005006756354884,
+            "title": "Apple iPhone XS 4G Face ID Mobile Phone Original Used Unlocked 5.8\" 64/256GB ROM Hexa-core IOS 12MP Camera Smartphones",
+            "sales": 0,
+            "image": "//ae01.alicdn.com/kf/Sb8ea247d2fc146c4aedc29e4d50af0e99.jpg",
+            "sku": {
+              "def": {
+                "price": null,
+                "promotionPrice": 180,
+                "prices": {
+                  "pc": 180,
+                  "app": 180
+                }
+              }
+            },
+            "averageStarRate": null
+          },
+          "delivery": {
+            "freeShipping": false,
+            "shippingFee": null,
+            "shippingDisplay": ""
+          }
+        },
+        {
+          "item": {
+            "itemId": 1005006755167842,
+            "title": "Apple iPhone 8 Plus 4G Fingerprint Mobile Phone Original Used Unlocked 5.5\" 64/256GB ROM Hexa-core IOS 12MP Camera Smartphones",
+            "sales": 0,
+            "image": "//ae01.alicdn.com/kf/S69b6fe18018940e49469f43b26b3197er.jpg",
+            "sku": {
+              "def": {
+                "price": null,
+                "promotionPrice": 174.3,
+                "prices": {
+                  "pc": 174.3,
+                  "app": 174.3
+                }
+              }
+            },
+            "averageStarRate": null
+          },
+          "delivery": {
+            "freeShipping": false,
+            "shippingFee": null,
+            "shippingDisplay": ""
+          }
+        },
+        {
+          "item": {
+            "itemId": 1005006670242376,
+            "title": "Joyroom 30W USB C Car Charger Adapter PD QC3.0 Mini & Metal USB Charger Fast Charging Phone Charger for iPhone Samsung Galaxy",
+            "sales": 38,
+            "image": "//ae01.alicdn.com/kf/S43c8cb879cde4276817486b31af1d0d5K.jpg",
+            "sku": {
+              "def": {
+                "price": null,
+                "promotionPrice": 4.09,
+                "prices": {
+                  "pc": 4.09,
+                  "app": 4.09
+                }
+              }
+            },
+            "averageStarRate": 5
+          },
+          "delivery": {
+            "freeShipping": true,
+            "shippingFee": 0,
+            "shippingDisplay": "Free shipping"
+          }
+        },
+        {
+          "item": {
+            "itemId": 1005006676423428,
+            "title": "RGB Light Wireless Charger Stand Multifunction FM TF Card USB Bluetooth Speaker For iPhone Xiaomi Samsung Fast Charging Station",
+            "sales": 20,
+            "image": "//ae01.alicdn.com/kf/Sc33438ed570b4ae2a7050fbf4ae5edfaH.jpg",
+            "sku": {
+              "def": {
+                "price": null,
+                "promotionPrice": 10.66,
+                "prices": {
+                  "pc": 10.66,
+                  "app": 10.66
+                }
+              }
+            },
+            "averageStarRate": null
+          },
+          "delivery": {
+            "freeShipping": true,
+            "shippingFee": 0,
+            "shippingDisplay": "Free shipping"
+          }
+        },
+        {
+          "item": {
+            "itemId": 1005006728835745,
+            "title": "OEM For iphone 15plus LCD Screen Touch Display Digitizer Assembly For iPhone 15plus LCD A3094 A2847 A3093 A3096 Replacement",
+            "sales": 0,
+            "image": "//ae01.alicdn.com/kf/S53bf917b8dd640a59718afae568611111.jpg",
+            "sku": {
+              "def": {
+                "price": null,
+                "promotionPrice": 132.14,
+                "prices": {
+                  "pc": 132.14,
+                  "app": 132.14
+                }
+              }
+            },
+            "averageStarRate": null
+          },
+          "delivery": {
+            "freeShipping": true,
+            "shippingFee": 0,
+            "shippingDisplay": "Free shipping"
+          }
+        },
+        {
+          "item": {
+            "itemId": 1005006690056863,
+            "title": "100% Factory Price GX INCELL LCD For IPHONE XR LCD Replacement Display Touch Panel Screen And Frame Assembly",
+            "sales": 1,
+            "image": "//ae01.alicdn.com/kf/Sdf7576a839ae40c9aa4dd99b4c551357q.jpg",
+            "sku": {
+              "def": {
+                "price": null,
+                "promotionPrice": 15.11,
+                "prices": {
+                  "pc": 15.11,
+                  "app": 15.11
+                }
+              }
+            },
+            "averageStarRate": null
+          },
+          "delivery": {
+            "freeShipping": true,
+            "shippingFee": 0,
+            "shippingDisplay": "Free shipping"
+          }
+        },
+        {
+          "item": {
+            "itemId": 1005006607203515,
+            "title": "240W PD3.1 Charger GaN3 Desktop Fast Charging Station 140W USB Type C PD PPS Power Adapter for MacBook Pro 16” Samsung iPhone 15",
+            "sales": 11,
+            "image": "//ae01.alicdn.com/kf/Sa606ff68f42c466b8ea6c2614bae06718.jpg",
+            "sku": {
+              "def": {
+                "price": null,
+                "promotionPrice": 70.66,
+                "prices": {
+                  "pc": 70.66,
+                  "app": 70.66
+                }
+              }
+            },
+            "averageStarRate": 4.9
+          },
+          "delivery": {
+            "freeShipping": true,
+            "shippingFee": 0,
+            "shippingDisplay": "Free shipping"
+          }
+        },
+        {
+          "item": {
+            "itemId": 1005006566085948,
+            "title": "Original PD 60W USB C Fast Charger Cable For Apple iPhone 15 Pro Max 15 Pro 15 Puls USB-C Weaving Charging Data Line Accessories",
+            "sales": 229,
+            "image": "//ae01.alicdn.com/kf/S9f31e8d588bd4669918e9115ae84c6ca4.jpg",
+            "sku": {
+              "def": {
+                "price": null,
+                "promotionPrice": 1.58,
+                "prices": {
+                  "pc": 1.58,
+                  "app": 1.58
+                }
+              }
+            },
+            "averageStarRate": 4.6
+          },
+          "delivery": {
+            "freeShipping": true,
+            "shippingFee": 0,
+            "shippingDisplay": "Free shipping"
+          }
+        },
+        {
+          "item": {
+            "itemId": 1005006559365092,
+            "title": "LED Qi Wireless Charger 10W Angel Wing Fast Wireless Charging For iphone 11 12 13 Pro max X XR 8 Plus Mobile Phone",
+            "sales": 2,
+            "image": "//ae01.alicdn.com/kf/S51a239ee5f1348afb51c12d4833e8721t.jpg",
+            "sku": {
+              "def": {
+                "price": null,
+                "promotionPrice": 20.85,
+                "prices": {
+                  "pc": 20.85,
+                  "app": 20.85
+                }
+              }
+            },
+            "averageStarRate": null
+          },
+          "delivery": {
+            "freeShipping": true,
+            "shippingFee": 0,
+            "shippingDisplay": "Free shipping"
+          }
+        },
+        {
+          "item": {
+            "itemId": 1005006565469184,
+            "title": "2Pcs Anti-Spy Hydrogel Film Screen Protector For iPhone 13 15 14 11 12 Pro Max For iPhone 14 15 Plus 13 15 Pro X XR XS Max Film",
+            "sales": 0,
+            "image": "//ae01.alicdn.com/kf/S4e55ea30c9864b9aa5074326c7740294d.jpg",
+            "sku": {
+              "def": {
+                "price": null,
+                "promotionPrice": 2.84,
+                "prices": {
+                  "pc": 2.84,
+                  "app": 2.84
+                }
+              }
+            },
+            "averageStarRate": null
+          },
+          "delivery": {
+            "freeShipping": true,
+            "shippingFee": 0,
+            "shippingDisplay": "Free shipping"
+          }
+        },
+        {
+          "item": {
+            "itemId": 1005006673197855,
+            "title": "Fast Charging USB Charger Cable For iPhone 14 13 12 11 Xs Max Xr X 8 7 6 Plus 5 SE iPad Origin Mobile Phone Long Data Cord 2m 3m",
+            "sales": 205,
+            "image": "//ae01.alicdn.com/kf/S1b21e25043a940679659514886c91d64F.jpg",
+            "sku": {
+              "def": {
+                "price": null,
+                "promotionPrice": 1.79,
+                "prices": {
+                  "pc": 1.79,
+                  "app": 1.79
+                }
+              }
+            },
+            "averageStarRate": 5
+          },
+          "delivery": {
+            "freeShipping": true,
+            "shippingFee": 0,
+            "shippingDisplay": "Free shipping"
+          }
+        },
+        {
+          "item": {
+            "itemId": 1005006713644726,
+            "title": "4in1 For iPhone 11/12/13/14/15 Pro Max Privacy Screen & Camera Lens Protector Pack - Glossy 9H Glass Shield",
+            "sales": 0,
+            "image": "//ae01.alicdn.com/kf/Se2f2d56797f241a7be7701998d4ef8f5D.jpg",
+            "sku": {
+              "def": {
+                "price": null,
+                "promotionPrice": 3.65,
+                "prices": {
+                  "pc": 3.65,
+                  "app": 3.65
+                }
+              }
+            },
+            "averageStarRate": null
+          },
+          "delivery": {
+            "freeShipping": true,
+            "shippingFee": 0,
+            "shippingDisplay": "Free shipping"
+          }
+        }
+      ]
+    }
+  }
