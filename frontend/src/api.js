@@ -3,7 +3,7 @@ import store from './store'; // Import the Vuex store
 import router from './router';
 
 const service = axios.create({
-  baseURL: 'http://127.0.0.1:5000',
+  baseURL: 'http://localhost:5000',
   withCredentials: true,
   xsrfCookieName: 'csrf_access_token', 
   headers: {

@@ -35,8 +35,9 @@ class Config:
     }
     
     SERVER_URL = 'http://localhost:5000/'
+    CLIENT_URI = 'http://localhost:5173'
     FRONTEND_URL = 'http://localhost:5173/user/profile'
-
+    
     #Sending email via api and RAPIDAPI
     SENDER_EMAIL = os.environ.get('SENDER_EMAIL')   
     REPLY_TO_EMAIL = os.environ.get('REPLY_TO_EMAIL')   

@@ -195,7 +195,7 @@ const edictEmail = async () => {
 };
 
 const checkEmail = async () => {
-  await store.dispatch('auth/checkEmail', { baseUrl: 'http://localhost:5173/user/check_email/' })
+  await store.dispatch('auth/checkEmail', { baseUrl: window.location.origin + '/user/check_email/' })
   .then((data) => {
     if (data.status === 'success') {
       ElMessage({message: data.message, type: 'success'})

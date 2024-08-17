@@ -3,15 +3,29 @@
         <div class="newstext">
             <h4>Nouveautés</h4>
             <p>Produits récemment ajoutés et <span> offres spéciales </span>  pour vous. </p>
-            <div class="custom-style" v-if="productCategories.length > 0">
-              <el-segmented @change="selectCategory" v-model="category" :options="productCategories" />
+            
+            <div class="slider-container" v-if="productCategories.length > 0">
+              <el-button style="margin-right: 10px; background-color: rgba(255, 255, 255, 0);" circle @click="scrollLeft" :icon="ArrowLeft" />
+              <div class="slider" ref="slider">
+                <div
+                  v-for="category in productCategories"
+                  :class="['category', { selected: category === selectedCategory }]"
+                  @click="selectCategory(category)"
+                >
+                  {{ category }}
+                </div>
+              </div>
+              <el-button style="margin-left: 10px; background-color: rgba(255, 255, 255, 0);" circle @click="scrollRight" :icon="ArrowRight" />
             </div>
+
           </div>
     </section>
+
 </template>
 
 <script setup>
   import { computed, ref, defineEmits, onMounted } from 'vue';
+  import { ArrowLeft, ArrowRight } from '@element-plus/icons-vue'
   import { useStore } from 'vuex'; 
   
   const store = useStore()
@@ -22,33 +36,41 @@
   const products = computed(() => store.getters['product/products']);
   
   const productCategories = computed(() => {
-    // Step 1: Extract unique categories
+    // Extract unique categories
     const uniqueCategories = [...new Set(products.value.map(product => product.category))];
-    // Step 2: Transform into the desired format
-    const categoryList = uniqueCategories.map(category => ({
-      value: category,
-      label: category
-    }));
-  
-    return categoryList;
+
+    return uniqueCategories;
   });
 
-  const selectCategory = () => {
-    emit('category', category.value);
+const selectedCategory = ref(null);
+const slider = ref(null);
+
+function selectCategory(category) {
+  selectedCategory.value = category;
+  emit('category', category);
+}
+
+const scrollLeft = () => {
+  if (slider.value) {
+    slider.value.scrollBy({ left: -200, behavior: 'smooth' });
   }
+}
 
-  onMounted(() => {
+const scrollRight = () => {
+  if (slider.value) {
+    slider.value.scrollBy({ left: 200, behavior: 'smooth' });
+  }
+}
 
-  });
 </script>
 
 <style scoped>
 
 #newsletter  {
-  display: flex;
+  /* display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: wrap; */
   background-image: url(https://i.postimg.cc/R0Bs4qqt/b14.png);
     background-repeat: no-repeat;
     background-position: 20% 30%;
@@ -74,38 +96,45 @@
   color: #ffbd27;
 }
 
-.custom-style {
+/* Categories slider */
+.slider-container {
+  display: flex;
+  align-items: center;
+  position: relative;
   width: 100%;
-  overflow-x: hidden;
 }
 
-.custom-style:hover {
+.slider-container .slider {
+  display: flex;
+  gap: 10px;
   overflow-x: auto;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+  flex: 1;
 }
-/* Custom scrollbar styles */
-.custom-style::-webkit-scrollbar {
-    width: 4px;
-    height: 6px;
-  }
 
-.custom-style::-webkit-scrollbar-track {
-    background: #041e42; 
-    border-radius: 10px;
-  }
+.slider-container .slider::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
 
-.custom-style::-webkit-scrollbar-thumb {
-    background: #888; 
-    border-radius: 10px;
-  }
+.slider-container .slider .category {
+  padding: 3px 6px;
+  border-radius: 10px;
+  background-color: #f1f1f150;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  white-space: nowrap;
+  font-weight: 500;
+  color: whitesmoke;
+}
 
-.custom-style::-webkit-scrollbar-thumb:hover {
-    background: #555; 
-  }
+.slider-container .slider .category:hover {
+  background-color:  #f1f1f170;
+}
 
-.custom-style .el-segmented {
-  --el-segmented-item-selected-color: var(--el-text-color-primary);
-  --el-segmented-item-selected-bg-color: #ffd100;
-  --el-border-radius-base: 16px;
+.slider-container .slider .selected {
+  background-color:  #f1f1f180;
 }
 
 </style>

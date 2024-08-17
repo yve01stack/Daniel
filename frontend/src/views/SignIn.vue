@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="form_container">
     <div class="login_form">
       <div>
         <h3 style="text-align: center; margin-bottom: 20px;">Connectez-vous</h3>
@@ -7,11 +7,12 @@
           :closable="false" show-icon style="background-color: transparent;" />
         <el-form
           ref="ruleFormRef"
-          style="max-width: 460px"
+          style="max-width: 400px"
           :model="ruleForm"
           status-icon
           :rules="rules"
           label-width="auto"
+          label-position="top"
           class="demo-ruleForm"
         >
         <el-form-item label="Téléphone" prop="phone">
@@ -111,7 +112,7 @@ const forgetPwd = ref(false)
 
 const pwdForm = reactive({
   email: '',
-  baseUrl: 'http://localhost:5173/user/reset_password/',
+  baseUrl: window.location.origin + '/user/reset_password/',
 });
 
 const resetResponse = reactive({status: false, type: 'success', msg: ""});
@@ -152,7 +153,7 @@ const submitForm =  (formEl: FormInstance | undefined) => {
 
 <style scoped>
 
-  .container {
+  .form_container {
     width: 100%;
     display: flex;
     justify-content: center;

@@ -16,7 +16,7 @@ def create_app(config_class=Config):
     db.init_app(app)
     migrate.init_app(app, db)
     jwt.init_app(app)
-    cors.init_app(app, resources={r"/*": {"origins": "http://localhost:5173"}}, supports_credentials=True)
+    cors.init_app(app, resources={r"/*": {"origins": app.config['CLIENT_URI']}}, supports_credentials=True)
     migrate.init_app(app, db, render_as_batch=True)
     mail.init_app(app)
     

@@ -1,9 +1,10 @@
-from flask import render_template
+from flask import render_template, url_for
 from app.docs import bp
 
 
 @bp.route('/')
 def docs():
+    # print(url_for('docs.docs', _external=True))
     return render_template('docs.html', title='API Documentation', year=2024)
 
 @bp.route('/docs/auth')

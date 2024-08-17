@@ -6,7 +6,9 @@
           <video v-else>
             <source :src="media.src" type="video/mp4" />
           </video>
-          <div class="play-icon"></div>
+          <div class="play-icon">
+            <el-button :icon="ZoomIn" style="color: aliceblue; font-size: large;" link @click="zoomPhoto(photo)" />
+          </div>
         </div>
       </div>
   
@@ -34,7 +36,8 @@
   
   <script setup>
   import { ref, defineProps } from 'vue';
-  
+  import { ZoomIn } from '@element-plus/icons-vue'
+
   const props = defineProps({
     medias: { type: Object, required: true }
   })
@@ -87,122 +90,116 @@
 
   </script>
   
-  <style scoped>
-  .thumbnail-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  
-  .thumbnail {
-    cursor: pointer;
-    max-width: 90px;
-    max-height: 65px;
-    overflow: hidden;
-    position: relative;
-    display: inline-block;
-    border-radius: 10%;
-    border: 2px solid whitesmoke;
-  }
-  
-  .thumbnail img,
-  .thumbnail video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-  
-  .play-icon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 28px;
-    height: 28px;
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    }
+<style scoped>
+.thumbnail-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
 
-  .play-icon::before {
-    content: '';
-    display: block;
-    width: 0;
-    height: 0;
-    border-left: 14px solid white;
-    border-top: 8px solid transparent;
-    border-bottom: 8px solid transparent;
-  }
+.thumbnail {
+  cursor: pointer;
+  max-width: 90px;
+  max-height: 65px;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  border-radius: 10%;
+  border: 2px solid whitesmoke;
+}
 
-  .lightbox {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-  }
-  
+.thumbnail img,
+.thumbnail video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.thumbnail .play-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.thumbnail:hover .play-icon {
+  opacity: 1;
+}
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 70%;
+  max-height: 70%;
+  text-align: center;
+}
+
+.lightbox img,
+.lightbox video {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.close-button,
+.prev-button,
+.next-button {
+  position: absolute;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+.close-button {
+  top: 10px;
+  right: 10px;
+}
+
+.prev-button {
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+}
+
+.next-button {
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+@media (max-width: 900px) {
   .lightbox-content {
-    position: relative;
-    max-width: 70%;
-    max-height: 70%;
-    text-align: center;
+    max-width: 80%;
+    max-height: 80%;
   }
-  
-  .lightbox img,
-  .lightbox video {
+}
+
+@media (max-width: 477px) {
+  .lightbox-content {
     max-width: 100%;
     max-height: 100%;
   }
-  
-  .close-button,
-  .prev-button,
-  .next-button {
-    position: absolute;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 2em;
-    cursor: pointer;
-  }
-  
-  .close-button {
-    top: 10px;
-    right: 10px;
-  }
-  
-  .prev-button {
-    top: 50%;
-    left: 10px;
-    transform: translateY(-50%);
-  }
-  
-  .next-button {
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
-  }
-
-  @media (max-width: 900px) {
-    .lightbox-content {
-      max-width: 80%;
-      max-height: 80%;
-    }
-  }
-
-  @media (max-width: 477px) {
-    .lightbox-content {
-      max-width: 100%;
-      max-height: 100%;
-    }
-  }
-  </style>
+}
+</style>
   

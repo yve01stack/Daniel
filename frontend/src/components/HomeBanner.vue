@@ -3,7 +3,7 @@
         <h4>Échange équitable</h4>
         <h2>Offres super avantageuses</h2>
         <h1>Sur tous les Produits</h1>
-        <p>Économisez plus avec MAeC et jusqu'à 20 % de réduction par rapport aux prix habituels !</p>
+        <p>Économisez plus avec <strong style="font-weight: 700;">MA.Chine</strong> et jusqu'à 20 % de réduction par rapport aux prix habituels !</p>
         <button>
           <RouterLink to="/product/all">Achetez Maintenant</RouterLink>
         </button>

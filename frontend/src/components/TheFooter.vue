@@ -51,6 +51,7 @@ footer {
   position: relative; 
   background-color: #E3E6F3;
   padding: 20px 15% 5px 15%;
+  bottom: 0px;
 }
 
 .row {
@@ -68,6 +69,7 @@ footer a {
 } 
 
 footer p {
+  font-size: 16px;
   line-height: 24px;
   margin: 0px 0 0px 0
 }
@@ -117,6 +119,14 @@ footer i:hover, footer a:hover {
   footer{
     padding: 10px 5% 5px 5%;
   }
+
+  footer a {
+  font-size: 12px;
+} 
+
+footer p {
+  font-size: 12px;
+}
 
 }
 </style>

@@ -37,16 +37,16 @@
         </span>
         <span class="price">{{ currentProduct.price }} {{ currentProduct.currency }}</span>
         <el-button-group v-if="isLoggedIn">
-          <el-button round  type="primary" @click="add2Cart(currentProduct.id)">
+          <el-button round  type="primary" @click="add2Cart(currentProduct.id)" style="padding: 5px 8px;">
             <el-icon><ShoppingCart /></el-icon>
           </el-button>
-          <el-button round plain type="primary" @click="orderProduct(currentProduct.id)">Commander</el-button>
+          <el-button round plain type="primary" @click="orderProduct(currentProduct.id)" style="padding: 5px 8px;">Commander</el-button>
         </el-button-group>
         <el-button-group v-else>
-          <el-button round type="primary">
+          <el-button round type="primary" style="padding: 5px 8px;">
             <router-link :to="{ name: 'signin' }"><el-icon><ShoppingCart /></el-icon></router-link>
           </el-button>
-          <el-button round plain type="primary">
+          <el-button round plain type="primary" style="padding: 5px 8px;">
             <router-link :to="{ name: 'signin' }">Commander</router-link>
           </el-button>
         </el-button-group>           
@@ -79,10 +79,11 @@
   import { ElMessage } from 'element-plus';
   import { ref, computed } from 'vue';
   import { useStore } from 'vuex';
-  import { useRoute } from 'vue-router';
+  import { useRoute, useRouter } from 'vue-router';
 
   const store = useStore();
   const route = useRoute();
+  const router = useRouter();
 
   const isLoggedIn = computed(() => store.getters['auth/isLoggedIn']);
   const products = computed(() => store.getters['product/products']);

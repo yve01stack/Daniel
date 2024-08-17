@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="form_container">
     <div class="register_form">
       <div>
         <h3 style="text-align: center; margin-bottom: 20px;">Inscrivez-vous</h3>
@@ -7,12 +7,13 @@
             :closable="false" show-icon style="background-color: transparent;" />
         <el-form
           ref="ruleFormRef"
-          style="max-width: 460px"
+          style="max-width: 400px"
           :model="ruleForm"
           :rules="rules"
           label-width="auto"
           class="demo-ruleForm"
           :size="formSize"
+          label-position="top"
           status-icon
         >
           <el-form-item label="Nom/Prénoms" prop="name">
@@ -186,11 +187,10 @@ const submitForm =  (formEl: FormInstance | undefined) => {
 
 <style scoped>
 
-.container {
+.form_container {
     width: 100%;
     display: flex;
     justify-content: center;
-    padding-top: 0px;
   }
   .register_form {
     max-width: 400px;
