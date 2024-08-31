@@ -35,7 +35,7 @@
             {{ item }}
           </el-tag>
         </span>
-        <span class="price">{{ currentProduct.price }} {{ currentProduct.currency }}</span>
+        <span class="price">{{ currentProduct.price.toFixed(2) }} {{ currentProduct.currency }}</span>
         <el-button-group v-if="isLoggedIn">
           <el-button round  type="primary" @click="add2Cart(currentProduct.id)" style="padding: 5px 8px;">
             <el-icon><ShoppingCart /></el-icon>

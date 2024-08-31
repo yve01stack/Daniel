@@ -5,3 +5,4 @@ app.db
 .env
 __pycache__
 app/static/uploads/
+aws_host_key.pem

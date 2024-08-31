@@ -20,9 +20,9 @@ const year = computed(() => {
       </div>
       <div class="col">
         <h3>Contact</h3>
-        <p><strong>Adresse:</strong> 349, Olorilogbon street, Onigbogbo Lagos</p>
-        <p><strong>Téléphone:</strong> +23456876199, +23458903120</p>
-        <p><strong>Heures:</strong> 10.00 - 18.00, Mon - Sat</p>
+        <p><strong>Adresse:</strong> 15944, Libreville, Gabon</p>
+        <p><strong>Téléphone:</strong> +23456876199</p>
+        <p><strong>Heures:</strong> 08.00 - 18.00, Lun - Sam</p>
         <h3>Suivez-nous</h3>
         <div class="icon">
           <a href="http://www.facebook.com/" target="_blank" class="social_media"><i class="fab fa-facebook"></i></a>

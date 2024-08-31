@@ -40,7 +40,7 @@ const add2Cart = async (id) => {
             text-color="#ff9900"
           />
         </div>
-        <h4>{{ currentProduct.price.toFixed(2) }} {{ currentProduct.currency }}</h4>
+        <h4>{{ currentProduct.price }} {{ currentProduct.currency }}</h4>
       </div>
     </router-link>
     <a v-if="isLoggedIn" @click="add2Cart(currentProduct.id)"><i class="fal fa-shopping-cart cart"></i></a>

@@ -203,7 +203,7 @@ def aliexpressSearchProducts():
     if not query and not category:
         response = jsonify({"status": "error", "message": "Format incorrect!"})
         return response, 401
-    data = aliapi.getProductsbySearch('group', 'category', 'table à mangée')
+    data = aliapi.getProductsbySearch(group, category, query)
     response = jsonify({"status": "success", "message": "Complete!", "searchItems": data['searchItems']})
     return response, 200
 
