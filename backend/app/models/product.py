@@ -81,7 +81,7 @@ class Product(db.Model):
 class Availability(db.Model):
     __tablename__ = 'availability'
     id = db.Column(db.Integer, primary_key=True)
-    location = db.Column(db.String, unique=True)
+    location = db.Column(db.String(200), unique=True)
 
     # Relationship to Product
     products = db.relationship('Product', secondary='product_availability', back_populates='available_in')
@@ -95,8 +95,8 @@ class Availability(db.Model):
 class Media(db.Model):
     __tablename__ = 'medias'
     id = db.Column(db.Integer, primary_key=True)
-    type = db.Column(db.String)
-    src = db.Column(db.String)
+    type = db.Column(db.String(10))
+    src = db.Column(db.String(500))
 
     # Relationship to Product
     products = db.relationship('Product', secondary='product_media', back_populates='media')
