@@ -52,7 +52,10 @@ def create_app(config_class=Config):
     @app.cli.command("init_db")
     def init_db():
         user.init_db()
-        product.init_db()
+        
+    @app.cli.command("init_product")
+    def init_product():
+        product.init_product()
     
     @app.shell_context_processor
     def make_shell_context():

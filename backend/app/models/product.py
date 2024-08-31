@@ -360,7 +360,7 @@ products = [{
           }]
 
 #database initialized
-def init_db(products):
+def init_product():
     user = User.query.filter_by(id=1).first()
     for product in products:
         new_product = product
