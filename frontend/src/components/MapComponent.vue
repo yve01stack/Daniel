@@ -41,7 +41,7 @@ const props = defineProps({
 });
 
 // OpenRouteService API key
-let API_KEY = '';
+const API_KEY = import.meta.env.VITE_OpenRouteService_API_KEY;
 
 const selectedOrderCopy = ref(props.selectedOrder);
 
@@ -123,7 +123,7 @@ const getCoordinates = async (address) => {
 
 onMounted(() => {
   initializeMap();
-  API_KEY = process.env.VUE_APP_OpenRouteService_API_KEY;
+
 });
 </script>
 

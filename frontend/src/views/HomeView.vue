@@ -80,6 +80,7 @@ const seeMore = () => {
 
 @media (max-width: 920px) {
   .pro-container{
+    /* justify-content: space-between; */
     justify-content: center
   }
   

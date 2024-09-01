@@ -117,7 +117,7 @@ footer i:hover, footer a:hover {
 
 @media (max-width: 477px) {
   footer{
-    padding: 10px 5% 5px 5%;
+    padding: 10px 10px 5px 10px;
   }
 
   footer a {

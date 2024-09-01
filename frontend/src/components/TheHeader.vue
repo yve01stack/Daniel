@@ -388,10 +388,6 @@ header{
 
 @media (max-width: 477px) {
 
-  .container{
-    padding: 90px 5% 5px 5%;
-  }
-
   header{
     padding: 8px 10px 8px 10px;
   }

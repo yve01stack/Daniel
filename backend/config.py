@@ -11,7 +11,7 @@ class Config:
         SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'app.db')
         SQLALCHEMY_TRACK_MODIFICATIONS = True
     else:
-        SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') #.replace("://", "ql://", 1)
+        SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL')
 
     SECRET_KEY = os.environ.get('SECRET_KEY')
     JWT_SECRET_KEY = os.environ.get('JWT_SECRET_KEY')
@@ -33,11 +33,11 @@ class Config:
             },
         }
     }
-    
-    SERVER_URL = 'http://localhost:5000/'
-    CLIENT_URI = 'http://localhost:5173'
-    FRONTEND_URL = 'http://localhost:5173/user/profile'
-    
+
+    SERVER_URL = os.environ.get('SERVER_URL')   
+    CLIENT_URI = os.environ.get('CLIENT_URI') 
+    FRONTEND_URL = os.environ.get('FRONTEND_URL') 
+
     #Sending email via api and RAPIDAPI
     SENDER_EMAIL = os.environ.get('SENDER_EMAIL')   
     REPLY_TO_EMAIL = os.environ.get('REPLY_TO_EMAIL')   
