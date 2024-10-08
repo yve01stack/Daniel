@@ -348,8 +348,6 @@ def updateProduct():
     return jsonify({"status": "success", "message": "Produit modifié!"}), 200
 
 @bp.route('/dashboard', methods=('GET','PSOT'))
-@jwt_required()
-@is_moderator
 def fetchDashboard():
     numUser = User.query.count()
     numModerator = User.query.filter_by(status='moderator').count()
