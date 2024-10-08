@@ -4,7 +4,7 @@
 
       <div class="about-part-1">
         <div class="about-img">
-          <img src="https://i.ibb.co/QP6Nmpf/image-1-about.jpg" loading="lazy" alt="A propos de mes achats en chine">
+          <img src="@/assets/image-1-about.jpg" loading="lazy" alt="A propos de mes achats en chine">
         </div>
       </div>
 
