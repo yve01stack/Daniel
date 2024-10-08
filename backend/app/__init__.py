@@ -66,16 +66,16 @@ def create_app(config_class=Config):
         
         # Register blueprints here
         from .docs import bp as docs_bp
-        app.register_blueprint(docs_bp)
+        app.register_blueprint(docs_bp, url_prefix='/api')
 
         from .auth import bp as auth_bp
-        app.register_blueprint(auth_bp, url_prefix='/auth')
+        app.register_blueprint(auth_bp, url_prefix='/api/auth')
 
         from .products import bp as product_bp
-        app.register_blueprint(product_bp, url_prefix='/product')
+        app.register_blueprint(product_bp, url_prefix='/api/product')
 
         from .admin import bp as admin_bp
-        app.register_blueprint(admin_bp, url_prefix='/admin')
+        app.register_blueprint(admin_bp, url_prefix='/api/admin')
 
     @app.route('/test')
     def test():
