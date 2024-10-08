@@ -22,7 +22,7 @@
   <section id="why-us">          
     <div class="why-us-content">
       <div id="about">
-        <div class="about-content">
+        <div class="about-content bref-intro">
           <h3>Pour faire court...</h3>
           <p>Aujourd'hui, nous sommes fiers de compter de nombreux clients satisfaits dans des pays tels que la France, le Gabon, le Togo, le Bénin, la Côte d'Ivoire, le Cameroun, et le Congo. Notre expertise et notre engagement à fournir des produits de qualité au meilleur prix nous permettent de répondre aux besoins des entreprises comme des particuliers, en toute confiance.</p>
         </div>
@@ -257,6 +257,17 @@ onMounted(() => {
   #why-us .container .item {
     width: 48%;
   }
+
+  #about .bref-intro {
+    padding-top: 0px;
+  }
+}
+
+@media (max-width: 477px) {
+  #about .about-content p{
+    font-size: 16px;
+  }
+
 }
 
 </style>
