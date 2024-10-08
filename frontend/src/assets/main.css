@@ -47,6 +47,10 @@ a{
   color: black;
 }
 
+b {
+  font-weight: 600;
+}
+
  /* Custom scrollbar styles */
  .customScrollbar::-webkit-scrollbar {
   width: 6px;

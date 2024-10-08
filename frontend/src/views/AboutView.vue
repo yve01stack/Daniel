@@ -10,18 +10,9 @@
 
       <div class="about-part-2">
         <div class="about-content">
-          <h2>À Propos De Nous</h2>
-          <h3>Bienvenu(e) sur Mes Achats en Chine.</h3>
-          <p>Si vous êtes arrivé jusque là, c'est sans doute parce que vous voulez savoir ce que nous faisons, pourquoi nous le faisons, et par ricochet, savoir à qui vous avez affaire.</p>
-          <h3>Pour faire court...</h3>
-          <p>Mon nom est Yves Fidèle, je suis le fondateur de Mes Achats en Chine. Tout a commencé en 2020, une année marquée par une crise sanitaire mondiale et par des confinements. Le télétravail ayant désormais pris de plus en plus grandes proportions, je passais alors beaucoup de temps sur internet à me renseigner sur comment avoir des revenus grâce à internet. Plusieurs options se sont offertes à moi. Au vu des compétences que j'avais déjà, j'ai opté pour le freelancing. Il me faut maintenant me faire connaitre et toucher un public susceptible d'être intéressé par mes services et faire le nécessaire pour que mes clients soient satisfaits.
-          </p>
-          <h3>Mais alors, où se situe le problème ?</h3>
-          <ul>
-            <li><i class="ion-android-checkmark-circle"></i> Où poster mes services sans rien devoir, afin de débuter ?</li>
-            <li><i class="ion-android-checkmark-circle"></i> Comment les promouvoir ?</li>
-            <li><i class="ion-android-checkmark-circle"></i> Comment cibler le public adéquat ?</li>
-          </ul>
+          <h2>À Propos de Mes Achats en Chine</h2>
+          <p>est une plateforme fondée par <b>Daniel Nehemy</b>, spécialisée dans l'exportation de produits de Chine vers le monde entier, y compris en <b>Afrique</b> et en <b>Europe</b>. Notre mission est simple : offrir aux clients la possibilité de commander des produits, en gros ou en détail, directement auprès des meilleurs fournisseurs chinois, tout en garantissant <b>le meilleur prix du marché</b> et <b>la sécurité des transactions</b>.</p>
+          <p>En nous appuyant sur un réseau de partenaires fiables et expérimentés en Chine, nous nous assurons que chaque produit commandé est soigneusement sélectionné, emballé, et expédié dans des conditions optimales. Nous prenons en charge l'intégralité du processus logistique, depuis la commande jusqu'à la livraison à votre porte.</p>
         </div>
       </div>
 
@@ -30,39 +21,49 @@
 
   <section id="why-us">          
     <div class="why-us-content">
+      <div id="about">
+        <div class="about-content">
+          <h3>Pour faire court...</h3>
+          <p>Aujourd'hui, nous sommes fiers de compter de nombreux clients satisfaits dans des pays tels que la France, le Gabon, le Togo, le Bénin, la Côte d'Ivoire, le Cameroun, et le Congo. Notre expertise et notre engagement à fournir des produits de qualité au meilleur prix nous permettent de répondre aux besoins des entreprises comme des particuliers, en toute confiance.</p>
+        </div>
+      </div> 
+
       <div class="features">
         <i class="fa fa-diamond" style="color: #f058dc;"></i>
-        <h4>Publication d'articles</h4>
-        <p>Assurer la modération et une large diffusion de vos articles, de diverses thématiques</p>
+        <h4>Politique de Confidentialité</h4>
+        <p>Nous prenons la <b>confidentialité de vos informations personnelles très au sérieux</b>. Toutes les données collectées sur notre site sont traitées de manière sécurisée, conformément aux lois et réglementations en vigueur. Nous nous engageons à ne jamais vendre, louer ou partager vos informations à des tiers sans votre consentement explicite. Pour plus de détails, veuillez consulter notre <b>Politique de Confidentialité complète</b>.</p>
       </div>
       <div class="features">
         <i class="fa fa-object-group" style="color: #ffb774;"></i>
-        <h4>Espace d'annonces</h4>
-        <p>Promouvoir les produits et services en mettant en contact l'annonceur et les potentiels clients</p>
+        <h4>Conditions Générales d'Utilisation</h4>
+        <p>En utilisant <b>Mes Achats en Chine</b>, vous acceptez de respecter nos <b>Conditions Générales d'Utilisation</b>, qui régissent toutes les transactions effectuées sur notre plateforme. Cela inclut les modalités de paiement, la gestion des retours, ainsi que nos règles relatives aux droits des consommateurs. Nous mettons tout en œuvre pour garantir une transparence totale tout au long du processus d'achat.</p>
       </div>
       <div class="features">
         <i class="fa fa-tag" style="color: #589af1;"></i>
-        <h4>Marketing</h4>
-        <p>Favoriser l'augmentation du trafic sur l'ensembles de vos articles, services et produits</p>
+        <h4>Pourquoi Choisir Mes Achats en Chine ?</h4>
+        <p><i class="fa fa-check-double" style="color: #088178; font-size:larger; padding-right: 5px;"></i><b>Meilleurs prix garantis</b>: Nous négocions directement avec les fournisseurs pour vous offrir des tarifs imbattables.</p>
+        <p><i class="fa fa-check-double" style="color: #088178; font-size:larger; padding-right: 5px;"></i><b>Sécurité</b>: Vos transactions sont 100% sécurisées, avec un suivi rigoureux des commandes.</p>
+        <p><i class="fa fa-check-double" style="color: #088178; font-size:larger; padding-right: 5px;"></i><b>Service client dédié</b>: Notre équipe est disponible pour répondre à toutes vos questions et vous accompagner tout au long de votre expérience d'achat.</p>
+        <p>Rejoignez dès aujourd'hui <b>Mes Achats en Chine</b>, votre passerelle vers des achats intelligents et sécurisés directement depuis la Chine !</p>
       </div>
     </div>
 
     <div class="container">
       <div class="item text-center">
-        <span data-toggle="counter-up">23</span>
+        <span data-toggle="counter-up">{{ dashboard.statistic[0].value }}</span>
         <p>Clients</p>
       </div>
       <div class="item text-center">
-        <span data-toggle="counter-up">02</span>
-        <p>Articles</p>
+        <span data-toggle="counter-up">{{ dashboard.statistic[5].value }}</span>
+        <p>Commandes</p>
       </div>
       <div class="item text-center">
-        <span data-toggle="counter-up">67</span>
-        <p>Services</p>
+        <span data-toggle="counter-up">18</span>
+        <p>Fournisseurs</p>
       </div>
       <div class="item text-center">
-        <span data-toggle="counter-up">90</span>
-        <p>Profils</p>
+        <span data-toggle="counter-up">{{ dashboard.statistic[1].value }}</span>
+        <p>Produits</p>
       </div>
     </div>
 
@@ -70,6 +71,23 @@
 
 </template>
 
+<script setup>
+import { computed, onMounted } from 'vue';
+import { useStore } from 'vuex';
+
+const store = useStore()
+
+const dashboard = computed(() => store.getters['admin/dashboard']);
+
+const fetchDashboard = async () => {
+    await store.dispatch('admin/fetchDashboard');
+};
+
+onMounted(() => {
+    fetchDashboard();
+});  
+
+</script>
 
 <style scoped>
 

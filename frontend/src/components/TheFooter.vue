@@ -16,7 +16,7 @@ const year = computed(() => {
         <RouterLink to="/">
           <img src="@/assets/logo_lg.png" class="logo_lg">
         </RouterLink>
-        <p>Got stuck? Ask your question on Vue Land, our official Discord server, or StackOverflow. You should also subscribe to our mailing list and follow the official @vuejs twitter account for latest news in the Vue world.</p>
+        <p>Rejoignez dès aujourd'hui Mes Achats en Chine, votre passerelle vers des achats intelligents et sécurisés directement depuis la Chine !</p>
       </div>
       <div class="col">
         <h3>Contact</h3>
