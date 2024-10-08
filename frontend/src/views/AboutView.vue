@@ -11,7 +11,7 @@
       <div class="about-part-2">
         <div class="about-content">
           <h2>À Propos de Mes Achats en Chine</h2>
-          <p>est une plateforme fondée par <b>Daniel Nehemy</b>, spécialisée dans l'exportation de produits de Chine vers le monde entier, y compris en <b>Afrique</b> et en <b>Europe</b>. Notre mission est simple : offrir aux clients la possibilité de commander des produits, en gros ou en détail, directement auprès des meilleurs fournisseurs chinois, tout en garantissant <b>le meilleur prix du marché</b> et <b>la sécurité des transactions</b>.</p>
+          <p><b>Mes Achats en Chine</b> est une plateforme fondée par <b>Daniel Nehemy</b>, spécialisée dans l'exportation de produits de Chine vers le monde entier, y compris en <b>Afrique</b> et en <b>Europe</b>. Notre mission est simple : offrir aux clients la possibilité de commander des produits, en gros ou en détail, directement auprès des meilleurs fournisseurs chinois, tout en garantissant <b>le meilleur prix du marché</b> et <b>la sécurité des transactions</b>.</p>
           <p>En nous appuyant sur un réseau de partenaires fiables et expérimentés en Chine, nous nous assurons que chaque produit commandé est soigneusement sélectionné, emballé, et expédié dans des conditions optimales. Nous prenons en charge l'intégralité du processus logistique, depuis la commande jusqu'à la livraison à votre porte.</p>
         </div>
       </div>
@@ -43,6 +43,7 @@
         <h4>Pourquoi Choisir Mes Achats en Chine ?</h4>
         <p><i class="fa fa-check-double" style="color: #088178; font-size:larger; padding-right: 5px;"></i><b>Meilleurs prix garantis</b>: Nous négocions directement avec les fournisseurs pour vous offrir des tarifs imbattables.</p>
         <p><i class="fa fa-check-double" style="color: #088178; font-size:larger; padding-right: 5px;"></i><b>Sécurité</b>: Vos transactions sont 100% sécurisées, avec un suivi rigoureux des commandes.</p>
+        <p><i class="fa fa-check-double" style="color: #088178; font-size:larger; padding-right: 5px;"></i><b>Livraison fiable</b>: Nous travaillons avec des transporteurs de confiance pour garantir une livraison rapide et sécurisée à l'international.</p>
         <p><i class="fa fa-check-double" style="color: #088178; font-size:larger; padding-right: 5px;"></i><b>Service client dédié</b>: Notre équipe est disponible pour répondre à toutes vos questions et vous accompagner tout au long de votre expérience d'achat.</p>
         <p>Rejoignez dès aujourd'hui <b>Mes Achats en Chine</b>, votre passerelle vers des achats intelligents et sécurisés directement depuis la Chine !</p>
       </div>
