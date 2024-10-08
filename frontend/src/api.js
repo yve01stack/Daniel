@@ -3,7 +3,7 @@ import store from './store'; // Import the Vuex store
 import router from './router';
 
 const service = axios.create({
-  baseURL: import.meta.env.VITE_Backend,
+  baseURL: import.meta.env.VITE_API_BASE_URL,
   withCredentials: true,
   xsrfCookieName: 'csrf_access_token', 
   headers: {
